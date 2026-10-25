@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Ahmad &amp; Fatimah</title>
+
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/icons/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="kunci">
+
+  <!--  TOAST -->
+  <div id="toast" class="toast-pesan">
+    <i class="bi bi-check2-circle me-2"></i>
+    <span id="toast-teks">Pesan</span>
+  </div>
+
+  <!-- COVER  -->
+  <section id="cover" class="d-flex align-items-center justify-content-center">
+    <div class="cover-kotak text-center p-4 p-md-5 rounded-4 shadow">
+
+      <p class="cover-kicker">The Wedding Celebration</p>
+      <h1 class="nama-mempelai">Ahmad &amp; Fatimah</h1>
+
+      <div class="pembatas">
+        <span class="garis"></span>
+        <i class="bi bi-flower1"></i>
+        <span class="garis"></span>
+      </div>
+
+      <p class="text-secondary mb-4">Sabtu, 28 November 2026</p>
+
+      <form id="form-cover" onsubmit="return bukaUndangan()">
+        <fieldset class="kotak-tamu">
+          <legend>Kepada Yth. Bapak/Ibu/Saudara/i</legend>
+          <label for="input-tamu" class="form-label">Nama Anda:</label>
+          <input type="text" id="input-tamu" class="form-control text-center"
+                 placeholder="Tuliskan nama Anda" maxlength="40" required>
+        </fieldset>
+
+        <button type="submit" class="tombol-emas mt-4">
+          <i class="bi bi-envelope-open-heart"></i>
+          <span>Buka Undangan</span>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <header id="awal" class="hero text-center">
+    <div class="container">
+      <p class="text-uppercase text-secondary mb-2">
+        <i class="bi bi-suit-heart text-emas"></i>
+        Walimatul 'Ursy
+        <i class="bi bi-suit-heart text-emas"></i>
+      </p>
+
+      <h2 class="nama-hero">Ahmad &amp; Fatimah</h2>
+
+      <div class="pembatas">
+        <span class="garis"></span>
+        <i class="bi bi-flower2"></i>
+        <span class="garis"></span>
+      </div>
+
+      <p class="mb-2">
+        <mark class="tanggal-sorot">
+          <i class="bi bi-calendar3 me-2"></i>Sabtu, 28 November 2026
+        </mark>
+      </p>
+
+      <p class="teks-sedang mt-4 mx-auto text-secondary">
+        Kepada Yth.<br>
+        <strong id="nama-tamu" class="nama-tamu">Tamu Undangan</strong>
+      </p>
+    </div>
+  </header>
+
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- AYAT  -->
+  <section id="pembuka" class="jarak-section latar-peach">
+    <div class="container text-center">
+      <div class="kotak-ayat">
+
+        <h3 class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h3>
+
+        <p class="judul-kecil mb-4">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+
+        <p class="ayat-arab">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+        </p>
+
+        <p class="terjemah teks-sedang mx-auto">
+          <q>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir.</q>
+        </p>
+
+        <p class="sumber-ayat">
+          <cite><abbr title="Al-Qur'an Surah">QS.</abbr> Ar-Rum Ayat 21</cite>
+        </p>
+
+        <p class="teks-sedang mx-auto mt-4 mb-0 text-secondary">
+          <small>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:</small>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  KEDUA MEMPELAI-->
+  <section id="mempelai" class="jarak-section">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Kedua Mempelai</h2>
+        <p class="subjudul mx-auto">Dua insan yang dipersatukan dalam ikatan suci pernikahan</p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-flower3"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+      <div class="row g-5 align-items-center justify-content-center">
+
+        <div class="col-lg-5 col-md-6">
+          <div class="kartu-mempelai text-center">
+            <figure class="mb-0">
+              <img src="images/ahmad.jpg" alt="Ahmad Al-Faruq" class="foto-mempelai">
+              <figcaption>
+                <h3 class="nama-mempelai-kartu">Ahmad Al-Faruq, S.Kom.</h3>
+              </figcaption>
+            </figure>
+            <p class="orang-tua">
+              Putra Pertama dari<br>
+              <strong>Bpk. H. Rahmat Hidayat</strong><br>
+              &amp; <strong>Ibu Hj. Siti Aminah</strong>
+            </p>
+            <a href="https://instagram.com" target="_blank" class="link-sosial">
+              <i class="bi bi-instagram"></i> @ahmad.alfaruq
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 text-center d-none d-lg-block">
+          <div class="tanda-dan">&amp;</div>
+        </div>
+
+        <div class="col-lg-5 col-md-6">
+          <div class="kartu-mempelai text-center">
+            <figure class="mb-0">
+              <img src="images/fatimah.jpg" alt="Fatimah Az-Zahra" class="foto-mempelai">
+              <figcaption>
+                <h3 class="nama-mempelai-kartu">Fatimah Az-Zahra, S.Farm.</h3>
+              </figcaption>
+            </figure>
+            <p class="orang-tua">
+              Putri Kedua dari<br>
+              <strong>Bpk. H. Muhammad Mansur</strong><br>
+              &amp; <strong>Ibu Hj. Nur Halimah</strong>
+            </p>
+            <a href="https://instagram.com" target="_blank" class="link-sosial">
+              <i class="bi bi-instagram"></i> @fatimah.azzahra
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HITUNG MUNDUR-->
+  <section id="hitung-mundur" class="jarak-section latar-rose">
+    <div class="container text-center">
+      <h2 class="judul-section">Menghitung Hari Bahagia</h2>
+      <p class="subjudul mx-auto">Setiap detik membawa kami semakin dekat menuju hari ikrar suci</p>
+      <div class="pembatas">
+        <span class="garis"></span>
+        <i class="bi bi-heart-half"></i>
+        <span class="garis"></span>
+      </div>
+
+      <div class="grid-hitung-mundur">
+        <div class="kotak-waktu">
+          <span id="cd-hari" class="angka-waktu">00</span>
+          <span class="label-waktu">Hari</span>
+        </div>
+        <div class="kotak-waktu">
+          <span id="cd-jam" class="angka-waktu">00</span>
+          <span class="label-waktu">Jam</span>
+        </div>
+        <div class="kotak-waktu">
+          <span id="cd-menit" class="angka-waktu">00</span>
+          <span class="label-waktu">Menit</span>
+        </div>
+        <div class="kotak-waktu">
+          <span id="cd-detik" class="angka-waktu">00</span>
+          <span class="label-waktu">Detik</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  ACARA-->
+  <section id="acara" class="jarak-section">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Agenda &amp; Lokasi Acara</h2>
+        <p class="subjudul mx-auto">Rangkaian acara pernikahan yang insyaAllah diselenggarakan pada:</p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-geo-alt-fill"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+
+      <div class="table-responsive mb-5">
+        <table class="table table-bordered text-center align-middle tabel-acara">
+          <caption class="text-center">Jadwal singkat acara</caption>
+          <thead>
+            <tr>
+              <th>Acara</th>
+              <th>Waktu</th>
+              <th>Tempat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Akad Nikah</td>
+              <td>08.00 - 10.00 WIB</td>
+              <td>Masjid Raya Al-Kautsar</td>
+            </tr>
+            <tr>
+              <td>Resepsi Pernikahan</td>
+              <td>11.00 - 15.00 WIB</td>
+              <td>Grand Ballroom Hotel Mulia</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Sabtu, 28 November 2026</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="row g-4 mb-5">
+
+      
+        <div class="col-md-6">
+          <div class="kartu-acara">
+            <div>
+              <div class="ikon-bulat"><i class="bi bi-gem"></i></div>
+              <h3 class="judul-kartu">Akad Nikah</h3>
+
+              <p class="detail-acara"><i class="bi bi-calendar2-check text-emas"></i> Sabtu, 28 November 2026</p>
+              <p class="detail-acara"><i class="bi bi-clock text-emas"></i> Pukul 08.00 - 10.00 WIB</p>
+
+              <p class="nama-tempat mt-3">Masjid Raya Al-Kautsar</p>
+              <address class="alamat">
+                Komp. Gelora Bung Karno, Jl. Asia Afrika No. 1, Senayan, Jakarta Pusat
+              </address>
+              <p class="text-muted fst-italic">
+                <small>*Demi kekhidmatan prosesi ijab kabul, akad dihadiri keluarga &amp; kerabat terdekat.</small>
+              </p>
+            </div>
+            <div class="mt-3">
+              <a href="https://maps.google.com" target="_blank" class="tombol-garis">
+                <i class="bi bi-geo-alt"></i> Petunjuk Arah (Maps)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="kartu-acara">
+            <div>
+              <div class="ikon-bulat"><i class="bi bi-balloon-heart"></i></div>
+              <h3 class="judul-kartu">Resepsi Pernikahan</h3>
+
+              <p class="detail-acara"><i class="bi bi-calendar2-check text-emas"></i> Sabtu, 28 November 2026</p>
+              <p class="detail-acara"><i class="bi bi-clock text-emas"></i> Pukul 11.00 - 15.00 WIB</p>
+
+              <p class="nama-tempat mt-3">Grand Ballroom Hotel Mulia</p>
+              <address class="alamat">
+                Jl. Asia Afrika Senayan No. 8, Gelora, Tanah Abang, Jakarta Pusat
+              </address>
+              <p class="text-muted fst-italic">
+                <small>*Sesi ramah tamah, doa bersama, dan jamuan makan siang bersama tamu kehormatan.</small>
+              </p>
+            </div>
+            <div class="mt-3">
+              <a href="https://maps.google.com" target="_blank" class="tombol-garis">
+                <i class="bi bi-geo-alt"></i> Petunjuk Arah (Maps)
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="kartu-foto-lokasi">
+        <div class="row g-0 align-items-center">
+          <div class="col-lg-6">
+            <img src="images/gedung-resepsi.jpg" alt="Ballroom Resepsi Pernikahan"
+                 class="w-100 h-100 object-fit-cover foto-lokasi">
+          </div>
+          <div class="col-lg-6 p-4 p-md-5">
+            <p class="text-uppercase text-emas fw-bold mb-1"><small>Lokasi Resepsi</small></p>
+            <h3 class="judul-kartu">Grand Ballroom Mulia</h3>
+            <p class="text-muted">
+              Ruang perayaan dirancang dengan dekorasi bunga bernuansa peach, rose, dan warm gold chandelier untuk memberikan kenyamanan dan kehangatan bagi seluruh keluarga serta para tamu undangan yang hadir.
+            </p>
+            <a href="https://maps.google.com" target="_blank" class="tombol-garis">
+              <i class="bi bi-box-arrow-up-right"></i> Buka di Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--  KISAH -->
+  <section id="kisah" class="jarak-section latar-peach">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Kisah Perjalanan Kami</h2>
+        <p class="subjudul mx-auto">Langkah demi langkah dalam ikhtiar menuju ikatan yang diridhoi-Nya</p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-book"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+      <ol class="timeline">
+        <li>
+          <div class="kotak-timeline">
+            <p class="tahun-timeline">Mei 2024</p>
+            <h4 class="judul-timeline">Awal Pertemuan (Ta'aruf)</h4>
+            <p class="isi-timeline">
+              Dengan perantara guru mengaji dan restu kedua orang tua, kami saling bertukar biodata ta'aruf. Niat yang lurus membawa ketenangan di dalam hati kedua belah pihak.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="kotak-timeline">
+            <p class="tahun-timeline">Januari 2026</p>
+            <h4 class="judul-timeline">Khitbah (Lamaran)</h4>
+            <p class="isi-timeline">
+              Keluarga besar Ahmad bersilaturahmi ke kediaman Fatimah untuk meminang secara resmi. Alhamdulillah, pinangan diterima dengan penuh kehangatan dan doa restu keluarga.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="kotak-timeline">
+            <p class="tahun-timeline">November 2026</p>
+            <h4 class="judul-timeline">Hari Bahagia (Walimah)</h4>
+            <p class="isi-timeline">
+              InsyaAllah ikrar suci akad nikah dan walimatul 'ursy akan terlaksana. Menyempurnakan separuh agama dan memulai lembaran baru sebagai sepasang suami-istri.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+    </div>
+  </section>
+
+  <!-- GALERI-->
+  <section id="galeri" class="jarak-section">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Galeri Kebahagiaan</h2>
+        <p class="subjudul mx-auto">Momen terekam dalam balutan busana peach dan ivory keemasan</p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-camera"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-8 col-md-10">
+          <figure class="kartu-galeri text-center mb-0">
+            <img src="images/pasangan.jpg" alt="Potret Ahmad dan Fatimah"
+                 class="img-fluid rounded-4 shadow-sm w-100">
+            <figcaption class="mt-3 text-muted fst-italic">
+              <q>Dan Kami menciptakan kamu berpasang-pasangan</q> &mdash;
+              <cite><abbr title="Al-Qur'an Surah">QS.</abbr> An-Naba: 8</cite>
+            </figcaption>
+          </figure>
+          <br> 
+          <figure class="kartu-galeri text-center mb-0">
+            <img src="images/pasangan2.jpg" alt="Potret Ahmad dan Fatimah"
+                 class="img-fluid rounded-4 shadow-sm w-100">
+            <figcaption class="mt-3 text-muted fst-italic">
+              <q>Every love story is beautiful, but ours is my favorite</q> &mdash;
+              <cite><abbr title="Al-Qur'an Surah"></abbr> Quotes</cite>
+            </figcaption>
+          </figure>
+          <br> 
+          <figure class="kartu-galeri text-center mb-0">
+            <img src="images/pasangan3.jpg" alt="Potret Ahmad dan Fatimah"
+                 class="img-fluid rounded-4 shadow-sm w-100">
+            <figcaption class="mt-3 text-muted fst-italic">
+              <q>Masuklah kamu ke dalam surga, kamu dan pasanganmu disenangkan</q> &mdash;
+              <cite><abbr title="Al-Qur'an Surah">QS.</abbr> Az-Zukhruf: 70</cite>
+            </figcaption>
+          </figure>
+          <br> 
+          <figure class="kartu-galeri text-center mb-0">
+            <img src="images/pasangan4.jpg" alt="Potret Ahmad dan Fatimah"
+                 class="img-fluid rounded-4 shadow-sm w-100">
+            <figcaption class="mt-3 text-muted fst-italic">
+              <q>Satu langkah awal menuju selamanya, bersama menggapai ridho-Nya</q> &mdash;
+              <cite><abbr title="Al-Qur'an Surah"></abbr> Quotes</cite>
+            </figcaption>
+          </figure>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+   
+
+  <!--  AMPLOP DIGITAL -->
+  <section id="kado" class="jarak-section latar-rose">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Tanda Kasih (Amplop Digital)</h2>
+        <p class="subjudul mx-auto">
+          Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberikan hadiah melalui:
+        </p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-gift"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-5">
+          <div class="kartu-kado">
+            <p class="nama-bank">BANK BCA</p>
+            <p id="rek-bca" class="nomor-rekening">5820 4912 88</p>
+            <p class="pemilik-rekening">a.n. Ahmad Al-Faruq</p>
+            <button type="button" id="tombol-salin-bca" class="tombol-salin">
+              <i class="bi bi-clipboard"></i> Salin No. Rekening
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="kartu-kado">
+            <p class="nama-bank">BANK MANDIRI</p>
+            <p id="rek-mandiri" class="nomor-rekening">1370 0192 8472 9</p>
+            <p class="pemilik-rekening">a.n. Fatimah Az-Zahra</p>
+            <button type="button" id="tombol-salin-mandiri" class="tombol-salin">
+              <i class="bi bi-clipboard"></i> Salin No. Rekening
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <div class="kartu-kado">
+            <h4 class="judul-kartu"><i class="bi bi-box2-heart text-emas me-2"></i>Kirim Kado Fisik</h4>
+            <p class="text-muted mb-1"><small>Alamat Kediaman Mempelai:</small></p>
+            <address id="alamat-kado" class="fw-semibold mb-3">
+              Jl. Mawar Indah Raya No. 12, RT 04 / RW 07, Senayan, Kebayoran Baru, Jakarta Selatan 12190
+            </address>
+            <button type="button" id="tombol-salin-alamat" class="tombol-salin">
+              <i class="bi bi-clipboard-check"></i> Salin Alamat Lengkap
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--  RSVP -->
+  <section id="rsvp" class="jarak-section">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Konfirmasi Kehadiran &amp; Doa Restu</h2>
+        <p class="subjudul mx-auto">Kirimkan doa dan konfirmasi kehadiran Anda untuk membantu kelancaran acara kami</p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-chat-heart"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-lg-5">
+          <div class="kotak-rsvp">
+            <h4 class="judul-kartu">Formulir Konfirmasi</h4>
+
+            <form id="form-rsvp" onsubmit="return kirimUcapan()">
+              <fieldset>
+                <legend class="visually-hidden">Data konfirmasi kehadiran</legend>
+
+                <div class="mb-3">
+                  <label for="rsvp-nama" class="form-label">Nama Lengkap</label>
+                  <input type="text" id="rsvp-nama" class="form-control"
+                         placeholder="Tuliskan nama Anda..." maxlength="40" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="rsvp-kehadiran" class="form-label">Konfirmasi Kehadiran</label>
+                  <select id="rsvp-kehadiran" class="form-select">
+                    <option value="Hadir">InsyaAllah Hadir</option>
+                    <option value="Ragu-ragu">Masih Ragu-ragu</option>
+                    <option value="Berhalangan">Berhalangan Hadir</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="rsvp-jumlah" class="form-label">Jumlah Tamu</label>
+                  <input type="number" id="rsvp-jumlah" class="form-control" value="1" min="1" max="5">
+                </div>
+
+                <div class="mb-4">
+                  <label for="rsvp-ucapan" class="form-label">Ucapan &amp; Doa Restu</label>
+                  <textarea id="rsvp-ucapan" class="form-control" rows="4" maxlength="250"
+                            placeholder="Tulis doa restu hangat Anda untuk kedua mempelai..." required></textarea>
+                </div>
+              </fieldset>
+
+              <button type="submit" class="tombol-emas w-100">
+                <i class="bi bi-send-fill"></i>
+                <span>Kirim Konfirmasi &amp; Ucapan</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="kotak-rsvp">
+            <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-3">
+              <h4 class="judul-kartu mb-0">Buku Tamu &amp; Ucapan</h4>
+              <div class="d-flex gap-2">
+                <span id="jumlah-doa" class="badge bg-light text-dark border">0 Doa</span>
+                <span id="jumlah-hadir" class="badge bg-success-subtle text-success border">0 Hadir</span>
+              </div>
+            </div>
+
+            <div id="daftar-ucapan" class="daftar-ucapan"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ADAB -->
+  <section id="adab" class="jarak-section latar-peach">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="judul-section">Adab Menghadiri Walimah</h2>
+        <p class="subjudul mx-auto">Panduan mulia dalam sunnah Rasulullah ﷺ saat menghadiri perayaan walimah</p>
+        <div class="pembatas">
+          <span class="garis"></span>
+          <i class="bi bi-stars"></i>
+          <span class="garis"></span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="kartu-adab">
+            <i class="bi bi-suit-heart-fill ikon-adab"></i>
+            <h5 class="judul-adab">Mendoakan Berkah</h5>
+            <p class="isi-adab">Mendoakan kedua mempelai agar dikaruniai keluarga yang sakinah dan barakah.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="kartu-adab">
+            <i class="bi bi-person-check-fill ikon-adab"></i>
+            <h5 class="judul-adab">Berbusana Sopan</h5>
+            <p class="isi-adab">Mengenakan pakaian yang rapi, menutup aurat, dan bernuansa santun.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="kartu-adab">
+            <i class="bi bi-cup-hot-fill ikon-adab"></i>
+            <h5 class="judul-adab">Makan Sambil Duduk</h5>
+            <p class="isi-adab">Meneladani adab makan dan minum dengan tangan kanan serta posisi duduk.</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="kartu-adab">
+            <i class="bi bi-clock-history ikon-adab"></i>
+            <h5 class="judul-adab">Tepat Waktu</h5>
+            <p class="isi-adab">Hadir tepat waktu sesuai jadwal sesi undangan untuk kenyamanan bersama.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER-->
+  <footer class="footer-undangan text-center">
+    <div class="container">
+      <p class="doa-arab">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+      <p class="teks-sedang mx-auto text-muted fst-italic mb-4">
+        <q>Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu susah, serta mengumpulkan kalian berdua dalam kebaikan.</q>
+        (<cite>HR. Abu Dawud</cite>)
+      </p>
+
+      <div class="pembatas">
+        <span class="garis"></span>
+        <i class="bi bi-flower1"></i>
+        <span class="garis"></span>
+      </div>
+
+      <p class="judul-kecil mt-4 mb-2">Keluarga Besar Kedua Mempelai</p>
+      <p class="text-muted mb-4">
+        <small>
+          Keluarga Bpk. H. Rahmat Hidayat &amp; Ibu Hj. Siti Aminah<br>
+          Keluarga Bpk. H. Muhammad Mansur &amp; Ibu Hj. Nur Halimah
+        </small>
+      </p>
+
+      <h3 class="nama-footer">Ahmad &amp; Fatimah</h3>
+
+      <p class="hak-cipta">
+        <small>&copy; 2026 Ahmad &amp; Fatimah Wedding Invitation.&nbsp;Hak Cipta Dilindungi.</small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- MUSIK LATAR -->
+  <audio id="musik" loop>
+    <source src="audio/nasheedwed.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
+  <button type="button" id="tombol-musik" class="tombol-musik" title="Nyalakan / Matikan Musik">
+    <i id="ikon-musik" class="bi bi-play-circle fs-5"></i>
+  </button>
+
+  <!-- NAVIGASI -->
+  <nav id="nav-bawah" class="nav-bawah fixed-bottom d-none justify-content-around" aria-label="Navigasi Undangan">
+    <a href="#awal" class="item-nav"><i class="bi bi-house-door"></i><span>Awal</span></a>
+    <a href="#mempelai" class="item-nav"><i class="bi bi-people"></i><span>Mempelai</span></a>
+    <a href="#acara" class="item-nav"><i class="bi bi-calendar-event"></i><span>Acara</span></a>
+    <a href="#kisah" class="item-nav"><i class="bi bi-book"></i><span>Kisah</span></a>
+    <a href="#kado" class="item-nav"><i class="bi bi-gift"></i><span>Kado</span></a>
+    <a href="#rsvp" class="item-nav"><i class="bi bi-chat-heart"></i><span>RSVP</span></a>
+  </nav>
+
+  <!-- Materi JS: External Script (file .js terpisah) -->
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
